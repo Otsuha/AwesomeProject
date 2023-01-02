@@ -9,8 +9,8 @@ import {AppRegistry} from 'react-native';
 //import FlexDirectionBasics from './Design/Flexbox';
 //import PositionLayout from './Design/FlexPosition';
 //import FlatListBasics from './Design/FlatListBasics';
-import FlatListDesign from './Design/SectionListBasics';
-//import FlatListDesign from './Design/FlatListDesign';
+//import SectionListBasics from './Design/SectionListBasics';
+import FlatListDesign from './CustomUI/FlatListDesign';
 import {name as appName} from './app.json';
 
 //AppRegistry.registerComponent(appName, () => App);
@@ -19,5 +19,5 @@ import {name as appName} from './app.json';
 //AppRegistry.registerComponent(appName, () => FlexDirectionBasics);
 //AppRegistry.registerComponent(appName, () => PositionLayout);
 //AppRegistry.registerComponent(appName, () => FlatListBasics);
+//AppRegistry.registerComponent(appName, () => SectionListBasics);
 AppRegistry.registerComponent(appName, () => FlatListDesign);
-//AppRegistry.registerComponent(appName, () => FlatListDesign);

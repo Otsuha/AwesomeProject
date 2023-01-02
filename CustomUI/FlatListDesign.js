@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, FlatList, StyleSheet, Text, Image} from 'react-native';
+import {View, FlatList, StyleSheet, Text} from 'react-native';
 
 function FlatListDesign() {
   return (
-    <View style={movieItemStyles.container}>
+    <View style={styles.container}>
       <FlatList
         data={[
           {title: '111', icon: ''},
@@ -18,19 +18,33 @@ function FlatListDesign() {
           {title: 'Julie', icon: ''},
         ]}
         renderItem={({item}) => <MovieItem value={item} />}
+        //renderItem={item => <Text style={styles.item}>{item.item.title}</Text>}
       />
     </View>
   );
 }
 
 function MovieItem(props) {
+  // return (
+  //   <View style={movieItemStyles.container}>
+  //     <Image style={movieItemStyles.icon} source={require('')} />
+  //     <Text style={movieItemStyles.title}>{'sssss'}</Text>
+  //   </View>
+  // );
   return (
     <View style={movieItemStyles.container}>
-      <Image style={movieItemStyles.icon} source={require('')} />
-      <Text style={movieItemStyles.title}>{props.title}</Text>
+      <View style={movieItemStyles.icon} />
+      <Text style={movieItemStyles.title}>{props.value.title + '2'}</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 56,
+  },
+});
 
 const movieItemStyles = StyleSheet.create({
   container: {
@@ -44,12 +58,11 @@ const movieItemStyles = StyleSheet.create({
     paddingTop: 10,
     paddingLeft: 10,
     paddingBottom: 10,
+    backgroundColor: 'red',
   },
   title: {
-    paddingTop: 10,
-    paddingLeft: 10,
-    paddingBottom: 10,
-    fontSize: 14,
+    padding: 10,
+    fontSize: 18,
   },
 });
 
