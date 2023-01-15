@@ -1,22 +1,13 @@
 import React from 'react';
-import {Doubler, myState, increment} from './MyMobX';
+import {Doubler, myState, increment} from './MyDoubler';
 import {Text, StyleSheet} from 'react-native';
-import {observable, runInAction} from 'mobx';
+import {runInAction} from 'mobx';
 import {observer} from 'mobx-react';
 
 const doubler = new Doubler();
 
-// function BeginMyMobX() {
-//   //const doubler = new Doubler();
-//   //doubler.increment();
-//   return <Text style={styles.item}>{doubler.value}</Text>;
-// }
-
-//const doubler = new Doubler();
-
-const BeginMyMobX = observer(() => {
+const BeginMyDoubler = observer(() => {
   return <Text style={styles.item}>{doubler.value}</Text>;
-  //<Text style={styles.item}>{doubler.value}</Text>;
 });
 
 setInterval(() => {
@@ -34,4 +25,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BeginMyMobX;
+export default BeginMyDoubler;
